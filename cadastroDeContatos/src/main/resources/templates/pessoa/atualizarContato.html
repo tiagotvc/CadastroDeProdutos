@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Editar Contato</title>
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="style/styleCss.css"/>
+
+
+
+</head>
+<body>
+
+<header>
+		<nav class="menu">
+		    <div class="nav-wrapper">
+		      <a href="#" class="brand-logo" >Editar Contato:</a>
+		      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		        <li><a href="/pessoas" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Lista de Contatos</a></li>
+		      </ul>
+		    </div>
+		</nav>
+	
+	</header>
+    <div align="center">
+        <h1>Editar Contato</h1>
+        <br />
+        
+        <th:block th:include="mensagemValidacao"></th:block>
+        <form action="#" th:action="@{/cadastrarContatos}" th:object="${pessoa}"
+            method="post" class="container">
+  
+                 
+               
+                   
+                   
+	
+	<div class="input-field col s4" align="center"> 
+		
+         <input hidden="texto"  type="text" th:field="*{codigo}" readonly="readonly" />
+                             
+	    <div class="row">
+		  <div class="input-field col s4">
+	    Nome:<input type="text" th:field="*{nome}" />
+		  </div>
+		<div class="row">
+		  <div class="input-field col s4">
+		Data de Nascimento: <input type="text" th:field="*{dataNascimento}" />
+		</div>
+		<div class="row">
+		  <div class="input-field col s4">
+		Naturalidade:<input type="text" th:field="*{naturalidade}" />
+		</div>
+		<div class="row">
+		  <div class="input-field col s4">
+		Nacionalidade:<input type="text" th:field="*{nacionalidade}" />
+		</div>
+		<div class="row">
+		  <div class="input-field col s4">
+		Email:<input type="text" th:field="*{email}" />
+		  </div>
+		<div class="row">
+		  <div class="input-field col s4">
+		CPF:<input type="text" th:field="*{cpf}" />
+		</div>
+		
+		<button class="btn waves-effect waves-light" type="submit">Save</button> 
+	
+	</form>
+	</div>
+	
+                
+               
+                    
+                    
+                    
+                
+      
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>
